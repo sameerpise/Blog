@@ -1,6 +1,6 @@
 import axios from'axios';
 
-const API_URL = "http://localhost:5000/blogs";
+const API_URL = "https://blog-maxs.onrender.com/blogs";
 
 export const getAllBlogs = async () => {
     const res = await fetch(`${API_URL}/all`);
@@ -22,7 +22,7 @@ export const createBlog = async (formData) => {
 
 export const updateBlog = async (id, updatedData) => {
     try {
-        const response = await axios.put(`http://localhost:5000/blogs/edit/${id}`, updatedData, {
+        const response = await axios.put(`https://blog-maxs.onrender.com/blogs/edit/${id}`, updatedData, {
             headers: { "Content-Type": "multipart/form-data" },
         });
         return response.data;
