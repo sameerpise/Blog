@@ -14,7 +14,7 @@ export default function Allpost() {
     // Fetch Blogs from API
     const fetchBlogs = async () => {
         try {
-            const res = await fetch("https://blog-maxs.onrender.com/blogs/all");
+            const res = await fetch("https://blog-11-jc09.onrender.com/blogs/all");
             const data = await res.json();
             setBlogs(data);
         } catch (err) {
@@ -51,7 +51,7 @@ export default function Allpost() {
                     <div key={blog._id} className={styles.blogCard}>
                         {blog.imageUrl && (
                             <img 
-                                src={`https://blog-maxs.onrender.com{blog.imageUrl}`} 
+                                src={`https://blog-11-jc09.onrender.com{blog.imageUrl}`} 
                                 alt="Blog" 
                                 className={`${styles.blogImage} ${styles.zoomEffect}`}
                             />
