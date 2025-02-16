@@ -20,8 +20,8 @@ export default function Auth() {
 
         try {
             const url = isLogin 
-                ? "http://localhost:5000/auth/login" 
-                : "http://localhost:5000/auth/register";
+                ? "https://blog-maxs.onrender.com/auth/login" 
+                : "https://blog-maxs.onrender.com/auth/register";
 
             const response = await fetch(url, {
                 method: "POST",
