@@ -51,7 +51,7 @@ export default function Allpost() {
                     <div key={blog._id} className={styles.blogCard}>
                         {blog.imageUrl && (
                             <img 
-                                src={`http://localhost:5000${blog.imageUrl}`} 
+                                src={`https://blog-maxs.onrender.com{blog.imageUrl}`} 
                                 alt="Blog" 
                                 className={`${styles.blogImage} ${styles.zoomEffect}`}
                             />
