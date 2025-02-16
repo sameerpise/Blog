@@ -36,7 +36,7 @@ export default function Post() {
     formData.append("author", blog.author);
     formData.append("image", blog.image);
 
-    const response = await fetch("https://blog-maxs.onrender.com/blogs/create", {
+    const response = await fetch("https://blog-11-jc09.onrender.com/blogs/create", {
       method: "POST",
       body: formData, 
     });
