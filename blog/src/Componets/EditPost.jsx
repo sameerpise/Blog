@@ -19,7 +19,7 @@ export default function EditPost() {
                 title: data.title, 
                 content: data.content, 
                 author: data.author, 
-                imagePreview: `https://blog-maxs.onrender.com${data.imageUrl}` 
+                imagePreview: `https://blog-11-jc09.onrender.com${data.imageUrl}` 
             });
         } catch (err) {
             console.error("Error fetching blog:", err);
