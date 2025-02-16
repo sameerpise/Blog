@@ -1,0 +1,62 @@
+/* TrendingTopicsCarousel.css */
+.trending-carousel {
+    padding: 40px 0;
+    background-color: #f9f9f9;
+}
+
+.single-cat {
+    overflow: hidden;
+    border-radius: 12px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.single-cat .inner {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+.thumbnail {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+.thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease-in-out;
+}
+
+/* Hover Effects */
+.single-cat:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.single-cat:hover .thumbnail img {
+    transform: scale(1.1);
+}
+
+/* Content Style */
+.content {
+    text-align: center;
+    padding: 12px;
+    background: white;
+    border-radius: 0 0 12px 12px;
+}
+
+.content h5 {
+    font-size: 1.1rem;
+    color: #333;
+    font-weight: bold;
+    margin: 0;
+    transition: color 0.3s;
+}
+
+.single-cat:hover .content h5 {
+    color: #ff5733;
+}

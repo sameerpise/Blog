@@ -1,0 +1,29 @@
+/* Search Container */
+.search-container {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  /* Search Input Field */
+  .search-input {
+    width: 60%;
+    padding: 12px;
+    font-size: 1rem;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    outline: none;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .search-input:focus {
+    border: 2px solid #0077cc;
+    box-shadow: 0 0 10px rgba(0, 119, 204, 0.2);
+  }
+  
+  /* Search Animation */
+  @media (max-width: 768px) {
+    .search-input {
+      width: 80%;
+    }
+  }
+  

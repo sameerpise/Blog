@@ -1,0 +1,209 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap");
+.animated-underline {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .animated-underline::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -4px;
+    width: 0;
+    height: 2px;
+    background-color: #3498db; /* Change to your desired color */
+    transition: all 0.3s ease-in-out;
+  }
+  .logo {
+    font-family: 'Poppins', sans-serif;
+    font-size: 24px;
+    font-weight:900;
+    background: linear-gradient(45deg, #007bff, #ff4081);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 3px 3px 8px rgba(39, 38, 38, 0.3);
+    letter-spacing: 1px;
+    display: inline-block;
+}
+
+  .animated-underline:hover::after {
+    width: 100%;
+    left: 0;
+  }
+  
+  .post-image-container {
+    overflow: hidden;
+    border-radius: 8px; /* Optional: Adds rounded corners */
+  }
+  
+  .post-image {
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .post-image:hover {
+    transform: scale(1.1);
+  }
+  /* ////////////////////// sidebar ////////////////////////////////////////// */
+
+  .sidebar-section a img {
+    transition: transform 0.3s ease-in-out;
+    border-radius: 8px; /* Optional: Adds smooth rounded corners */
+}
+
+.sidebar-section a:hover img {
+    transform: scale(1.1); /* Slight zoom effect */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Optional shadow */
+}
+
+
+
+
+
+  /* //////////////////////////////singlepage list////////////////////////////////// */
+
+  .sidebar-section {
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar-section h5 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.sidebar-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar-section li {
+    margin-bottom: 8px;
+}
+
+.sidebar-section a {
+    display: block;
+    padding: 10px;
+    color: #333;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: all 0.3s ease-in-out;
+}
+
+.sidebar-section a:hover {
+    background: #f3f4f6;
+    color: #2563eb;
+    transform: translateX(5px);
+}
+
+  /* ///////////////////////////////singlepage list///////////////////////////////// */
+
+
+  /* ///////////////////////////////NewsLetter///////////////////////////////// */
+
+  .sidebar-section {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.sidebar-section h5 {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.sidebar-section h2 {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.sidebar-section input[type="email"] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+.sidebar-section input[type="email"]:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 5px rgba(37, 99, 235, 0.5);
+}
+
+.sidebar-section input[type="submit"] {
+  margin-top: px;
+    width: 100%;
+    padding: 12px;
+    background: #2563eb;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.sidebar-section input[type="submit"]:hover {
+    background: #1e40af;
+    transform: scale(1.05);
+}
+
+
+
+  /* ///////////////////////////////NewsLetter///////////////////////////////// */
+
+
+  
+
+  .text-hover-effect {
+    position: relative;
+    display: inline-block;
+    transition: color 0.3s ease-in-out;
+  }
+  .roll-text {
+    text-align: center;
+    display: inline-block;
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  .move-up-down {
+    display: inline-block;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .move-up-down:hover {
+    transform: translateY(-10px); /* Moves text up */
+  }
+  
+  .roll-text:hover {
+    transform: rotate(360deg);
+  }
+  
+  .text-hover-effect:hover {
+   
+    color: #3498db; /* Change to your desired hover color */
+  }
+  
+  .text-hover-effect::after {
+ 
+    content: " New Posts"; /* Changes text when hovered */
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+  }
+  
+  .text-hover-effect:hover::after {
+    opacity: 1;
+  }
+  
+
+
+
+
+  /* //////////////////////////////////////////////////////////////// */

@@ -1,0 +1,32 @@
+.actions {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.editBtn, .deleteBtn {
+    padding: 8px 12px;
+    font-size: 14px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.editBtn {
+    background-color: #28a745;
+    color: white;
+}
+
+.deleteBtn {
+    background-color: #dc3545;
+    color: white;
+}
+
+.editBtn:hover {
+    background-color: #218838;
+}
+
+.deleteBtn:hover {
+    background-color: #c82333;
+}

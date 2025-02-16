@@ -1,0 +1,168 @@
+/* Blog Container */
+.blogContainer {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Heading */
+.heading {
+    font-size: 2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 10px;
+}
+
+.heading::after {
+    content: '';
+    width: 100%;
+    height: 3px;
+    background-color: #ff4500;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: transform 0.3s ease-in-out;
+    transform: scaleX(0);
+}
+
+.heading:hover::after {
+    transform: scaleX(1);
+}
+
+/* No Blogs Found */
+.noBlogs {
+    font-size: 1.2rem;
+    color: #555;
+    margin-top: 20px;
+}
+
+/* Blog Cards */
+.blogCard {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 20px 0;
+    text-align: left;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    overflow: hidden;
+    position: relative;
+}
+
+.blogCard:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Blog Image */
+.blogImage {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.blogCard:hover .blogImage {
+    transform: scale(1.05);
+}
+
+/* Blog Title */
+.blogTitle {
+    font-size: 1.6rem;
+    font-weight: bold;
+    margin: 15px 0;
+    color: #333;
+    transition: color 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.blogTitle:hover {
+    color: #ff4500;
+}
+
+/* Blog Content */
+.blogContent {
+    font-size: 1.1rem;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 10px;
+    max-height: 100px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+
+/* Blog Meta */
+.blogMeta {
+    font-size: 0.9rem;
+    color: #777;
+}
+
+.author {
+    font-weight: bold;
+    color: #ff4500;
+}
+
+/* Actions */
+.actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+.editBtn,
+.deleteBtn {
+    border: none;
+    padding: 8px 15px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.editBtn {
+    background: #007bff;
+    color: white;
+}
+
+.editBtn:hover {
+    background: #0056b3;
+    transform: scale(1.05);
+}
+
+.deleteBtn {
+    background: #dc3545;
+    color: white;
+}
+
+.deleteBtn:hover {
+    background: #b02a37;
+    transform: scale(1.05);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .blogCard {
+        padding: 15px;
+    }
+
+    .blogTitle {
+        font-size: 1.4rem;
+    }
+
+    .blogContent {
+        font-size: 1rem;
+    }
+
+    .editBtn,
+    .deleteBtn {
+        font-size: 0.9rem;
+    }
+}

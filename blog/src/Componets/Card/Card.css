@@ -1,0 +1,108 @@
+/* Post List Styles */
+.post-container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.featured-posts {
+    padding: 20px 0;
+}
+
+.text-hover-effect span {
+    transition: color 0.3s ease-in-out;
+}
+
+.text-hover-effect span:hover {
+    color: #ff4500;
+}
+
+/* Post Card */
+.post-card {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.post-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Post Image */
+.post-image-container {
+    overflow: hidden;
+}
+
+.post-image {
+    width: 100%;
+    transition: transform 0.3s ease-in-out;
+}
+
+.post-image:hover {
+    transform: scale(1.1);
+}
+
+/* Animated Underline */
+.animated-underline {
+    display: inline-block;
+    position: relative;
+}
+
+.animated-underline::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background-color: #ff4500;
+    left: 0;
+    bottom: -5px;
+    transform: scaleX(0);
+    transition: transform 0.3s ease-in-out;
+}
+
+.animated-underline:hover::after {
+    transform: scaleX(1);
+}
+
+/* Meta Footer */
+.metafooter {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.meta-footer-thumb img {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    margin-right: 10px;
+}
+
+.post-name a {
+    font-weight: bold;
+    color: #333;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.post-name a:hover {
+    color: #ff4500;
+}
+
+/* Read More Icon */
+.post-read-more i {
+    color: #ff4500;
+    transition: transform 0.3s;
+}
+
+.post-read-more:hover i {
+    transform: rotate(360deg);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .post-card {
+        margin: 10px 0;
+    }
+}

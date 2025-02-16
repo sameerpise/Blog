@@ -1,0 +1,30 @@
+
+.hero-section {
+    background-image:url(../src/assets/images/head.jpg);
+    background-size:cover;
+    padding: 9rem 0;
+    margin-top:-87px;
+    margin-bottom:3.5rem;
+    z-index: 1;
+    position: relative;
+    color: white;
+}
+
+.wrapintro {
+  background: rgba(0, 0, 0, 0.6);
+  padding: 40px;
+  border-radius: 10px;
+}
+
+.animated-underline {
+  font-size: 3rem;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+
+
+.btn-primary:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
