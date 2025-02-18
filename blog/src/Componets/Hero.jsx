@@ -10,7 +10,7 @@ export default function Hero() {
       {/* Hero Section */}
       <Parallax speed={-10} className="hero-section " style={{ backgroundImage: `url(${bgImage})` }}>
         <div className="wrapintro text-center">
-          <h1 className="animated-underline">Welcome to Sameer Writes</h1>
+          <h1 className="animated-underline">Welcome to Life Unfiltered</h1>
           <h2 className="lead">
             Explore insightful articles, creative stories, and expert opinions
             from various fields. Inspire, learn, and share your thoughts.
