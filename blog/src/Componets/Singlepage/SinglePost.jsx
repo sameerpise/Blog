@@ -20,7 +20,7 @@ export default function SinglePost() {
     // Fetch Single Blog Post
     const fetchBlog = async () => {
         try {
-            const res = await fetch(`http://localhost:5000/blogs/${id}`);
+            const res = await fetch(`https://blog-11-jc09.onrender.com/blogs/${id}`);
             const data = await res.json();
             setBlog(data);
         } catch (err) {
@@ -34,7 +34,7 @@ export default function SinglePost() {
         < >
             <button  onClick={() => navigate(-1)}>⬅ Back</button>
 {/*             <h1 >{blog.title}</h1>
-            {blog.imageUrl && <img src={`http://localhost:5000${blog.imageUrl}`} alt="Blog" />}
+            {blog.imageUrl && <img src={`https://blog-11-jc09.onrender.com${blog.imageUrl}`} alt="Blog" />}
             <p >{blog.content}</p>
             <small >
                 By <span >{blog.author}</span> | {new Date(blog.createdAt).toLocaleDateString()}
@@ -153,7 +153,7 @@ export default function SinglePost() {
                     </div>
                     {/* <!-- Post Featured Image --> */}
                     {/* <img className="featured-image img-fluid" src={blog.image}alt="" /> */}
-                    {blog.imageUrl && <img src={`http://localhost:5000${blog.imageUrl}`} className="featured-image img-fluid" alt="Blog" />}
+                    {blog.imageUrl && <img src={`https://blog-11-jc09.onrender.com${blog.imageUrl}`} className="featured-image img-fluid" alt="Blog" />}
                   <p >{blog.content}</p>
                     {/* <!-- End Featured Image -->
                     <!-- Post Content --> */}
