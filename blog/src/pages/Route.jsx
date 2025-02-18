@@ -12,6 +12,7 @@ import Contact from './Contact';
 import Auth from '../Componets/Auth/Auth';
 import { AuthProvider } from '../Componets/Auth/AuthContext';
 import PrivateRoute from '../Componets/Auth/PrivateRoute';
+import SinglePost from '../Componets/Singlepage/Singlepagee';
 export default function Routee() {
   return (
     <AuthProvider>
