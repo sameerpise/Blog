@@ -3,7 +3,6 @@ import styles from './AllPost.module.css';
 import { useNavigate } from 'react-router-dom';
 import { getAllBlogs, deleteBlog } from '../services/Blogservice';
 import './Allpost.css';
-
 export default function Allpost() {
     const [blogs, setBlogs] = useState([]);
     const navigate = useNavigate();
