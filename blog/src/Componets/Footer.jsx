@@ -10,7 +10,7 @@ const Footer = () => {
         <div className="row footer-top py-4">
           {/* Logo & About */}
           <div className="col-md-4">
-            <h2 className="footer-logo">Sameer Writes</h2>
+            <h2 className="footer-logo">Life Unfiltered</h2>
             <p>Inspiring minds, one blog at a time.</p>
           </div>
 
@@ -39,7 +39,7 @@ const Footer = () => {
 
         {/* Footer Bottom */}
         <div className="footer-bottom text-center py-3">
-          <p className="mb-0">&copy; {new Date().getFullYear()} Sameer Writes. All rights reserved.</p>
+          <p className="mb-0">&copy; {new Date().getFullYear()} Life Unfiltered. All rights reserved.</p>
         </div>
       </div>
     </footer>
