@@ -38,6 +38,9 @@ export default function Allpost() {
     const handleEdit = (id) => {
         navigate(`/edit/${id}`);
     };
+    const Addpost=()=>{
+        navigate('/create')
+    }
 
     return (
         <div className={styles.blogContainer}>
@@ -70,6 +73,7 @@ export default function Allpost() {
                         <div className={styles.actions}>
                             <button className={styles.editBtn} onClick={() => handleEdit(blog._id)}>Edit</button>
                             <button className={styles.deleteBtn} onClick={() => handleDelete(blog._id)}>Delete</button>
+                            <button className={styles.deleteBtn} onClick={ Addpost}>Add Post</button>
                         </div>
                     </div>
                 ))
