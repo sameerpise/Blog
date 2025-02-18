@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faNewspaper, faUser, faPhone, faUserShield } from "@fortawesome/free-solid-svg-icons";
+import { faNewspaper, faUser, faPhone,} from "@fortawesome/free-solid-svg-icons";
 import logo from "../assets/logo.png"; // Adjust the path if needed
 import '../Componets/animatedline/animeted.css'
 import '../App.css'
