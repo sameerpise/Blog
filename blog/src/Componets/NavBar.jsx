@@ -36,7 +36,7 @@ const NavBar = () => {
  
          <a className="navbar-brand logo" href="/">
           {/* <img src={logo} alt="Blog Logo" /> */}
-          Sameer Writes
+          Life Unfiltered
         </a> 
 
         <div className="collapse navbar-collapse justify-content-center" id="navbarsWow">
@@ -86,11 +86,11 @@ const NavBar = () => {
             <li className="nav-item animated-underline ">
               <a className="nav-link hover:text-red-500 transition duration-300" href="/contact" to="/contact"><FontAwesomeIcon icon={faPhone} className="mr-2" style={{marginRight:"10px"}} />Contact</a>
             </li>
-            <li className="nav-item animated-underline">
+{/*             <li className="nav-item animated-underline">
               <a target="_blank" rel="noopener noreferrer" className="nav-link highlight" href="/login">
               <FontAwesomeIcon icon={faUserShield} className="mr-2" style={{marginRight:"9px"}}  /> Admin
               </a>
-            </li>
+            </li> */}
           </ul>
          
         </div>
