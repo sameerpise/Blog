@@ -13,6 +13,7 @@ import Auth from '../Componets/Auth/Auth';
 import { AuthProvider } from '../Componets/Auth/AuthContext';
 import PrivateRoute from '../Componets/Auth/PrivateRoute';
 import SinglePost from '../Componets/Singlepage/SinglePost';
+import AnotherList from '../Componets/SecodPostlist/AnotherList';
 export default function Routee() {
   return (
     <AuthProvider>
