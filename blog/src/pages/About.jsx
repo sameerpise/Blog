@@ -7,7 +7,7 @@ const About = () => {
       {/* Hero Section */}
       <section className="hero">
         <div className="hero-content">
-          <h1>About <span>Sameer Writes</span></h1>
+          <h1>About <span>Life Unfiltered</span></h1>
           <p>Explore creativity, knowledge, and inspiration through our blogs.</p>
         </div>
       </section>
@@ -17,7 +17,7 @@ const About = () => {
         <div className="about-text">
           <h2>Our Story</h2>
           <p>
-            "Sameer Writes" is a platform dedicated to insightful blogs on 
+            "Life Unfiltered" is a platform dedicated to insightful blogs on 
             education, nature, and YouTube content creation. Our goal is to 
             inspire and inform through high-quality writing.
           </p>
