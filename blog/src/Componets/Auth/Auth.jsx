@@ -1,12 +1,14 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { motion, AnimatePresence } from "framer-motion"; // Import Framer Motion
 import "./Auth.css"; // Import styles
 
 export default function Auth() {
     const [form, setForm] = useState({ username: "", email: "", password: "" });
     const [isLogin, setIsLogin] = useState(true);
     const [error, setError] = useState("");
-    const [loading, setLoading] = useState(false); // Loading state
+    const [success, setSuccess] = useState("");
+    const [loading, setLoading] = useState(false);
     const navigate = useNavigate();
 
     // Handle input change
@@ -18,7 +20,8 @@ export default function Auth() {
     const handleSubmit = async (e) => {
         e.preventDefault();
         setError("");
-        setLoading(true); // Start loading
+        setSuccess("");
+        setLoading(true);
 
         try {
             const url = isLogin 
@@ -36,22 +39,53 @@ export default function Auth() {
 
             if (isLogin) {
                 localStorage.setItem("token", data.token);
-                navigate("/create"); // Redirect after login
+                setSuccess("Login Successful! Redirecting...");
+                setTimeout(() => navigate("/create"), 2000);
             } else {
-                alert("Registration Successful! Please Login.");
-                setIsLogin(true);
+                setSuccess("Registration Successful! Please Login.");
+                setTimeout(() => setIsLogin(true), 2000);
             }
         } catch (err) {
             setError(err.message);
         } finally {
-            setLoading(false); // Stop loading
+            setLoading(false);
         }
     };
 
     return (
         <div className="auth-container">
             <h2>{isLogin ? "Login" : "Register"}</h2>
-            {error && <p className="error">{error}</p>}
+
+            {/* Animated Error Message */}
+            <AnimatePresence>
+                {error && (
+                    <motion.div 
+                        className="alert error"
+                        initial={{ opacity: 0, y: -20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        exit={{ opacity: 0, y: -20 }}
+                        transition={{ duration: 0.5 }}
+                    >
+                        {error}
+                    </motion.div>
+                )}
+            </AnimatePresence>
+
+            {/* Animated Success Message */}
+            <AnimatePresence>
+                {success && (
+                    <motion.div 
+                        className="alert success"
+                        initial={{ opacity: 0, y: -20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        exit={{ opacity: 0, y: -20 }}
+                        transition={{ duration: 0.5 }}
+                    >
+                        {success}
+                    </motion.div>
+                )}
+            </AnimatePresence>
+
             <form onSubmit={handleSubmit}>
                 {!isLogin && (
                     <input type="text" name="username" placeholder="Username" onChange={handleChange} required />
@@ -62,6 +96,7 @@ export default function Auth() {
                     {loading ? (isLogin ? "Logging in..." : "Registering...") : isLogin ? "Login" : "Register"}
                 </button>
             </form>
+
             <p onClick={() => setIsLogin(!isLogin)} className="toggle-auth">
                 {isLogin ? "New user? Register here." : "Already have an account? Login here."}
             </p>
