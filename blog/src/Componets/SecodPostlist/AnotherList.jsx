@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react'
 // import { blogs } from '../../Data/Dummy'
 import './style.css'
 import { useNavigate } from "react-router-dom";
+import Postlistt from './Postlistt';
 export default function AnotherList () {
   const [blogs, setBlogs] = useState([])
 //   const [alert, setAlert] = useState({ message: "", type: "" }); // Alert state
@@ -24,6 +25,7 @@ export default function AnotherList () {
   if (!blogs) return <p>Loading...</p>
   return (
     <>
+         <Postlistt />
       <div
         className='container post-container'
         style={{ position: 'relative', marginTop: '50px' }}
