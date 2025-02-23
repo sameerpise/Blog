@@ -6,6 +6,7 @@ export default function Auth() {
     const [form, setForm] = useState({ username: "", email: "", password: "" });
     const [isLogin, setIsLogin] = useState(true);
     const [error, setError] = useState("");
+    const [loading, setLoading] = useState(false); // Loading state
     const navigate = useNavigate();
 
     // Handle input change
@@ -17,11 +18,12 @@ export default function Auth() {
     const handleSubmit = async (e) => {
         e.preventDefault();
         setError("");
+        setLoading(true); // Start loading
 
         try {
             const url = isLogin 
-                ? "https://blog-11-jc09.onrender.com/auth/login" 
-                : "https://blog-11-jc09.onrender.com/auth/register";
+                ? "http://localhost:5000/auth/login" 
+                : "http://localhost:5000/auth/register";
 
             const response = await fetch(url, {
                 method: "POST",
@@ -41,11 +43,13 @@ export default function Auth() {
             }
         } catch (err) {
             setError(err.message);
+        } finally {
+            setLoading(false); // Stop loading
         }
     };
 
     return (
-        <div className="auth-container ">
+        <div className="auth-container">
             <h2>{isLogin ? "Login" : "Register"}</h2>
             {error && <p className="error">{error}</p>}
             <form onSubmit={handleSubmit}>
@@ -54,7 +58,9 @@ export default function Auth() {
                 )}
                 <input type="email" name="email" placeholder="Email" onChange={handleChange} required />
                 <input type="password" name="password" placeholder="Password" onChange={handleChange} required />
-                <button type="submit">{isLogin ? "Login" : "Register"}</button>
+                <button type="submit" disabled={loading}>
+                    {loading ? (isLogin ? "Logging in..." : "Registering...") : isLogin ? "Login" : "Register"}
+                </button>
             </form>
             <p onClick={() => setIsLogin(!isLogin)} className="toggle-auth">
                 {isLogin ? "New user? Register here." : "Already have an account? Login here."}
