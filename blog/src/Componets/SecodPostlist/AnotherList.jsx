@@ -14,7 +14,7 @@ export default function AnotherList () {
 
   const fetchBlogs = async () => {
     try {
-      const res = await fetch('http://localhost:5000/blogs/all')
+      const res = await fetch('https://blog-11-jc09.onrender.com/blogs/all')
       const data = await res.json()
       setBlogs(data)
     } catch {
@@ -47,7 +47,7 @@ export default function AnotherList () {
                           alt='Post Thumbnail'
                         /> */}
                         <img
-                          src={`http://localhost:5000${postData.imageUrl}`}
+                          src={`https://blog-11-jc09.onrender.com${postData.imageUrl}`}
                           alt='Blog'
                           className='thumbnail post-image'
                           onClick={() => navigate(`/blog/${postData._id}`)}
