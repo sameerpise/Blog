@@ -58,7 +58,7 @@ const NavBar = () => {
         <div className="collapse navbar-collapse" id="navbarsWow">
           <ul className="navbar-nav ms-auto">
             <li className="nav-item animated-underline ">
-              <a className="nav-link hover:text-blue-500 transition duration-300"  href="/AllPost"> <FontAwesomeIcon icon={faNewspaper} className="mr-3" style={{marginRight:"10px"}} />Post</a>
+              <a className="nav-link hover:text-blue-500 transition duration-300"  href="/AllPost"> <FontAwesomeIcon icon={faNewspaper} className="mr-3" style={{marginRight:"10px"}} />CreatePost</a>
             </li>
 
             {/* Dropdown Menu */}
