@@ -78,7 +78,7 @@ const NavBar = () => {
             </li> */}
 
             <li className="nav-item animated-underline ">
-              <a className="nav-link hover:text-green-500 transition duration-300" href="/AllPostt">AllPost</a>
+              <a className="nav-link hover:text-green-500 transition duration-300" href="/AllPostt"><FontAwesomeIcon icon={faNewspaper} className="mr-3" style={{marginRight:"10px"}} />AllPost</a>
             </li>
             <li className="nav-item animated-underline ">
               <a className="nav-link hover:text-green-500 transition duration-300" href="/about"> <FontAwesomeIcon icon={faUser} className="mr-2" style={{marginRight:"10px"}} /> About</a>
