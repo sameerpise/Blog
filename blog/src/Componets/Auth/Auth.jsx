@@ -25,8 +25,8 @@ export default function Auth() {
 
         try {
             const url = isLogin 
-                ? "http://localhost:5000/auth/login" 
-                : "http://localhost:5000/auth/register";
+                ? "https://blog-11-jc09.onrender.com/auth/login" 
+                : "https://blog-11-jc09.onrender.com/auth/register";
 
             const response = await fetch(url, {
                 method: "POST",
@@ -40,10 +40,10 @@ export default function Auth() {
             if (isLogin) {
                 localStorage.setItem("token", data.token);
                 setSuccess("Login Successful! Redirecting...");
-                setTimeout(() => navigate("/create"), 2000);
+                setTimeout(() => navigate("/create"), 5000);
             } else {
                 setSuccess("Registration Successful! Please Login.");
-                setTimeout(() => setIsLogin(true), 2000);
+                setTimeout(() => setIsLogin(true), 5000);
             }
         } catch (err) {
             setError(err.message);
