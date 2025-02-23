@@ -77,9 +77,9 @@ const NavBar = () => {
 
             </li> */}
 
-            {/* <li className="nav-item">
-              <a className="nav-link" to="/category">Category</a>
-            </li> */}
+            <li className="nav-item animated-underline ">
+              <a className="nav-link hover:text-green-500 transition duration-300" href="/AllPostt">AllPost</a>
+            </li>
             <li className="nav-item animated-underline ">
               <a className="nav-link hover:text-green-500 transition duration-300" href="/about"> <FontAwesomeIcon icon={faUser} className="mr-2" style={{marginRight:"10px"}} /> About</a>
             </li>
