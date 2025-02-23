@@ -40,7 +40,7 @@ export default function Post() {
     formData.append("image", blog.image);
 
     try {
-      const response = await fetch("http://localhost:5000/blogs/create", {
+      const response = await fetch("https://blog-11-jc09.onrender.com/blogs/create", {
         method: "POST",
         body: formData,
       });
