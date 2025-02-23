@@ -11,6 +11,7 @@ export default function Post() {
     imagePreview: null,
   });
 
+  const [loading, setLoading] = useState(false); // Loading state
   const navigate = useNavigate();
 
   const handleChange = (e) => {
@@ -30,23 +31,31 @@ export default function Post() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setLoading(true); // Set loading to true
+
     const formData = new FormData();
     formData.append("title", blog.title);
     formData.append("content", blog.content);
     formData.append("author", blog.author);
     formData.append("image", blog.image);
 
-    const response = await fetch("https://blog-11-jc09.onrender.com/blogs/create", {
-      method: "POST",
-      body: formData, 
-    });
+    try {
+      const response = await fetch("http://localhost:5000/blogs/create", {
+        method: "POST",
+        body: formData,
+      });
 
-    const data = await response.json();
-    if (response.ok) {
-      alert("Blog created successfully!");
-      navigate("/AllPost");
-    } else {
-      alert("Error: " + data.message);
+      const data = await response.json();
+      if (response.ok) {
+        alert("Blog created successfully!");
+        navigate("/AllPost");
+      } else {
+        alert("Error: " + data.message);
+      }
+    } catch (error) {
+      alert("An error occurred: " + error.message);
+    } finally {
+      setLoading(false); // Reset loading state
     }
   };
 
@@ -58,13 +67,13 @@ export default function Post() {
         <textarea name="content" placeholder="Content" onChange={handleChange} required />
         <input type="text" name="author" placeholder="Author" onChange={handleChange} required />
         <input type="file" name="image" accept="image/*" onChange={handleImageChange} required />
-        
-        {/* Image Preview */}
-        {blog.imagePreview && (
-          <img src={blog.imagePreview} alt="Preview" className="image-preview" />
-        )}
 
-        <button type="submit">Submit</button>
+        {/* Image Preview */}
+        {blog.imagePreview && <img src={blog.imagePreview} alt="Preview" className="image-preview" />}
+
+        <button type="submit" disabled={loading}>
+          {loading ? "Submitting..." : "Submit"}
+        </button>
       </form>
     </>
   );
