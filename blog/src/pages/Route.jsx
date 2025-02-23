@@ -35,6 +35,7 @@ export default function Routee() {
      </Route>
      <Route path="/edit/:id" element={<EditPost />} />
      <Route path="/post/:id" element={<SinglePage />} />
+       <Route path="/AllPostt" element={<AnotherList/>} />
       <Route path="/blog/:id" element={<SinglePost />} />
      <Route path="/about" element={ <About /> } />
      <Route path="/contact" element={<Contact />} />
