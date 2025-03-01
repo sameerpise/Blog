@@ -40,7 +40,7 @@ export default function Auth() {
             if (isLogin) {
                 localStorage.setItem("token", data.token);
                 setSuccess("Login Successful! Redirecting...");
-                setTimeout(() => navigate("/create"), 5000);
+                setTimeout(() => navigate("/create"), 2000);
             } else {
                 setSuccess("Registration Successful! Please Login.");
                 setTimeout(() => setIsLogin(true), 5000);
