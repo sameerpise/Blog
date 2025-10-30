@@ -7,7 +7,8 @@ import '../App.css'
 
 const NavBar = () => {
   const [searchTerm, setSearchTerm] = useState("");
- 
+
+  
 
   const handleSearch = (e) => {
     e.preventDefault();
